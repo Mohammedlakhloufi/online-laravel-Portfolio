@@ -3,7 +3,7 @@
 
 *{
 	list-style: none;
-	text-decoration: none;
+	text-decoration: none !important;
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -48,6 +48,9 @@ body{
 	font-size: 14px;
 }
 
+.wrapper .sidebar ul {
+	padding: 0 ;
+}
 .wrapper .sidebar ul li a{
 	display: block;
 	padding: 13px 30px;
@@ -68,9 +71,7 @@ body{
 .wrapper .sidebar ul li a:hover,
 .wrapper .sidebar ul li a.active{
 	color: #0c7db1;
-
 	background:white;
-    border-right: 2px solid rgb(5, 68, 104);
 }
 
 .wrapper .sidebar ul li a:hover .icon,

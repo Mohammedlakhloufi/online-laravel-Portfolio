@@ -30,57 +30,55 @@
         </div>
         <ul>
             <li>
-                <a href="/" class="active">
+                <a href="/" class="ancre active">
                     <span class="icon"><i class="fas fa-home"></i></span>
                     <span class="item">Home</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" class="ancre">
                     <span class="icon"><i class="fas fa-info"></i></span>
                     <span class="item">about</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/admin.create_award" class="ancre">
                     <span class="icon"><i class="fas fa-award"></i></span>
                     <span class="item">Certification</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" class="ancre">
                     <span class="icon"><i class="fas fa-graduation-cap"></i></span>
                     <span class="item">education</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/admin.create_experience" class="ancre">
                     <span class="icon"><i class="fas fa-history"></i></span>
                     <span class="item">experience</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" class="ancre">
                     <span class="icon"><i class="fas fa-magic"></i></span>
                     <span class="item">interest</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" class="ancre">
                     <span class="icon"><i class="fas fa-brain"></i></span>
                     <span class="item">skills</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" class="ancre">
                     <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
                     <span class="item">logout</span>
                 </a>
             </li>
         </ul>
     </div>
-    
-
     
     @yield('content')
 </div>
@@ -90,6 +88,20 @@
 	hamburger.addEventListener("click", function(){
 		document.querySelector("body").classList.toggle("active");
 	})
+  </script>
+  <script>
+
+// Get all ancrs with class="ancre"
+let btns = document.getElementsByClassName("ancre");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
   </script>
 </body>
 </html>

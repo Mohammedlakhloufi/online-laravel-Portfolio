@@ -6,7 +6,7 @@
 <div class="container mt-5">
     <div class="row">
         <h1 class="text-center text-secondary">create new experience</h1>
-        <form action="/store_experience" method="post" class="form-group col-md-6 offset-3">
+        <form action="/admin.store_experience" method="post" class="form-group col-md-6 m-auto">
             @csrf
             <label for="start_date" class="mt-2">title</label>
              <input type="text" class="form-control" name="title" placeholder="title">
@@ -55,10 +55,12 @@
                 <td>{{$experience->start_date}}</td>
                 <td>{{$experience->end_date}}</td>
                 <td>
-                    <form action="destroy_experience/{{$experience->id}}" method="post">
+                    <form action="admin.destroy_experience/{{$experience->id}}" method="post">
                         @csrf
                         @method('DELETE')
-                        <button class="btn btn-danger">delete</button>
+                        <button class="btn btn-danger"><i class="fas fa-trash"></i></button>
+                        <a href="/admin.show_experience/{{ $experience->id }}" class="btn btn-warning"><i
+                          class="fas fa-edit"></i></a>
                     </form>
                 </td>
                 
