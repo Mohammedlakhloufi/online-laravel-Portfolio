@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AwardController;
+use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\ShowController;
 use Illuminate\Support\Facades\Route;
@@ -26,6 +27,15 @@ Route::post('admin.store_experience',[ExperienceController::class,'store_experie
 Route::delete('admin.destroy_experience/{id}',[ExperienceController::class,'destroy_experience']);
 Route::get('admin.show_experience/{id}', [ExperienceController::class,'show_experience']);
 Route::put('admin.update_experience/{id}',[ExperienceController::class,'update_experience']);
+
+//Education
+
+Route::get('admin.create_education',[EducationController::class,'create_education']);
+Route::post('admin.store_education',[EducationController::class,'store_education']);
+Route::delete('admin.destroy_education/{id}',[EducationController::class,'destroy_education']);
+Route::get('admin.show_education/{id}', [EducationController::class,'show_education']);
+Route::put('admin.update_education/{id}',[EducationController::class,'update_education']);
+
 
 //Award
 Route::get('admin.create_award',[AwardController::class,'create_award']);

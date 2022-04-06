@@ -11,7 +11,7 @@ class ExperienceController extends Controller
     public function create_experience()
     {
         $experiences=Experience::all();
-        return view('BackOffice.create_experience',['experiences'=>$experiences]);
+        return view('BackOffice.create_experience',['experiences'=>$experiences,'nav'=>'experienceActive']);
     }
 
     public function store_experience(ExperienceRequest $req)
@@ -36,7 +36,7 @@ class ExperienceController extends Controller
     }
     public function show_experience($id)
     {
-        return view('BackOffice.show_experience',['experience'=>Experience::findOrFail($id)]);
+        return view('BackOffice.show_experience',['experience'=>Experience::findOrFail($id),'nav'=>'experienceActive']);
         return back();
     }
 

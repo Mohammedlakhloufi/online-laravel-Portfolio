@@ -9,7 +9,7 @@ class AwardController extends Controller
 {
     public function create_award()
     {
-        return view('BackOffice.create_award',['awards'=>Award::all()]);
+        return view('BackOffice.create_award',['awards'=>Award::all(),'nav'=>'awardActive']);
     }
     public function store_award(Request $req)
     {
@@ -33,7 +33,7 @@ class AwardController extends Controller
     }
     public function show_award($id)
     {
-        return view('BackOffice.show_award',['award'=>Award::findOrFail($id)]);
+        return view('BackOffice.show_award',['award'=>Award::findOrFail($id),'nav'=>'awardActive']);
     }
     public function update_award(Request $req,$id)
     {

@@ -48,7 +48,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="ancre">
+                <a href="/admin.create_education" class="ancre">
                     <span class="icon"><i class="fas fa-graduation-cap"></i></span>
                     <span class="item">education</span>
                 </a>
@@ -88,20 +88,6 @@
 	hamburger.addEventListener("click", function(){
 		document.querySelector("body").classList.toggle("active");
 	})
-  </script>
-  <script>
-
-// Get all ancrs with class="ancre"
-let btns = document.getElementsByClassName("ancre");
-
-// Loop through the buttons and add the active class to the current/clicked button
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
   </script>
 </body>
 </html>

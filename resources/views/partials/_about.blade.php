@@ -2,7 +2,7 @@
     <div class="resume-section-content">
         <h1 class="mb-0">
             Clarence
-            <span class="text-primary">Taylor</span>
+            <span class="text-secondary">Taylor</span>
         </h1>
         <div class="subheading mb-5">
             3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
