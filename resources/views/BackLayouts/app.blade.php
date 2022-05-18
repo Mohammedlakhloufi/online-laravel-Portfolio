@@ -36,9 +36,9 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="ancre">
+                <a href="/admin.create_profile" class="ancre">
                     <span class="icon"><i class="fas fa-info"></i></span>
-                    <span class="item">about</span>
+                    <span class="item">Profile</span>
                 </a>
             </li>
             <li>

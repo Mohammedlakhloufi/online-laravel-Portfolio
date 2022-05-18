@@ -5,7 +5,7 @@
             @foreach ($awards as $award)
             <li>
                 <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                <a href="{{$award->certificate_link}}">{{$award->certificate_name}}</a>-{{$award->certificate_provider}}
+                <a href="{{$award->certificate_link}}" style="text-decoration: none">{{$award->certificate_name}}</a>-{{$award->certificate_provider}}
             </li>
             @endforeach
         </ul>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Award;
 use App\Models\Education;
 use App\Models\Experience;
+use App\Models\Profile;
 use Illuminate\Http\Request;
 
 class ShowController extends Controller
@@ -16,14 +17,14 @@ class ShowController extends Controller
         // $interests=Interest::all();
         $awards=Award::all();
         // $projects=Project::all();
-        // $profile=Profile::first();
+        $profile=Profile::first();
         
         return view('FrontOffice.welcome',[
             "experiences"=>$experiences,
             "educations"=>$educations,
             // "interests"=>$interests,
             "awards"=>$awards,
-            // "profile"=>$profile,
+            "profile"=>$profile,
             // "projects"=>$projects,
         ]);
     }
