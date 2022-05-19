@@ -5,6 +5,7 @@ use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShowController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,6 +21,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[ShowController::class,'show']);
 
+Route::middleware(['auth'])->group(function () {
+    
 //Profile
 
 Route::get('admin.create_profile', [ProfileController::class,'create_profile']);
@@ -51,6 +54,10 @@ Route::post('admin.store_award',[AwardController::class,'store_award']);
 Route::delete('admin.destroy_award/{id}',[AwardController::class,'destroy_award']);
 Route::get('admin.show_award/{id}',[AwardController::class,'show_award']);
 Route::put('admin.update_award/{id}',[AwardController::class,'update_award']);
+});
+//Authentication
+Route::group(['prefix'=>'admin'], function(){
+    Auth::routes();
+});
 
-// Auth::routes();
 
