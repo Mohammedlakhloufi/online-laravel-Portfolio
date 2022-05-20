@@ -11,8 +11,8 @@ class Profile extends Model
 {
     use HasFactory,SoftDeletes;
     protected $fillable=['first_name','last_name','email','phone','address','bio','photo','github','twitter','facebook','linkedin'];
-    // public function user()
-    // {
-    //     return $this->BelongsTo(User::class);
-    // }
+    public function user()
+    {
+        return $this->BelongsTo(User::class);
+    }
 }
