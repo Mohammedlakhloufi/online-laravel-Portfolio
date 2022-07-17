@@ -7,7 +7,6 @@ use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
-use Symfony\Component\HttpKernel\Profiler\Profile as ProfilerProfile;
 
 class ProfileController extends Controller
 {
@@ -41,11 +40,11 @@ class ProfileController extends Controller
             
             $data=$req->validated();
             $data['photo']=$path;
+            $data['user_id']=Auth::user()->id;
             Profile::create($data);
-            // $data['user_id']=Auth::user()->id;
-            return back();
         }
-    }
+        return back();
+    } 
     public function destroy_profile($id)
     {
         Profile::findOrFail($id)->delete();

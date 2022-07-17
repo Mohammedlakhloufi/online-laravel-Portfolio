@@ -56,7 +56,7 @@ Route::get('admin.show_award/{id}',[AwardController::class,'show_award']);
 Route::put('admin.update_award/{id}',[AwardController::class,'update_award']);
 });
 //Authentication
-Route::group(['prefix'=>'admin'], function(){
+Route::group(['prefix'=>'admin_ml_88'], function(){
     Auth::routes();
 });
 

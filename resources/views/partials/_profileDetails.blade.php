@@ -11,7 +11,7 @@
                         </form>
                 </li>
                 <li class="list-group-item text-center"><img
-                            src="{{asset ('storage/'.$profile->photo)}}" alt="profile picture"
+                    src="{{ Storage::url($profile->photo) }}" alt="profile_picture" alt="profile picture"
                             class="rounded-circle w-25"></li>
                 <li class="list-group-item"> <span class="fw-bold">First name:</span> {{ $profile->first_name }}</li>
                 <li class="list-group-item"> <span class="fw-bold">Last name:</span> {{ $profile->last_name }}</li>

@@ -24,8 +24,12 @@
     </div>
     <div class="sidebar">
         <div class="profile">
-            {{-- <img src="{{asset('storage/'.Auth::user()->profile->photo)}}" alt="profile picture"> --}}
-            <img src="{{Storage::url(Auth::user()->profile->photo)}}" alt="profile picture">
+           @if (Auth::user()->profile->photo)
+            <img src="{{Storage::url(Auth::user()->profile->photo)}}" alt="profile picture"> 
+           @else
+           <img src="https://thumbs.dreamstime.com/b/happy-smiling-geek-hipster-beard-man-cool-avatar-geek-man-avatar-104871313.jpg" alt="profile picture">
+           @endif
+           
             <h3>{{Auth::user()->name}}</h3>
             <p>Designer</p>
         </div>
