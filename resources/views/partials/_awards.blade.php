@@ -1,7 +1,7 @@
 <section class="resume-section" id="awards">
     <div class="resume-section-content">
-        <h2 class="mb-3 text-primary">Awards & Certifications</h2>
-        <ul class="fa-ul mb-0">
+        <h2 class="mb-4 text-primary">Awards & Certifications</h2>
+        <ul class="fa-ul ">
             @foreach ($awards as $award)
             <li>
                 <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>

@@ -27,33 +27,33 @@
            @if (Auth::user()->profile->photo)
             <img src="{{Storage::url(Auth::user()->profile->photo)}}" alt="profile picture"> 
            @else
-           <img src="https://thumbs.dreamstime.com/b/happy-smiling-geek-hipster-beard-man-cool-avatar-geek-man-avatar-104871313.jpg" alt="profile picture">
+           <img src="https://thumbs.dreamstime.com/b/happy-smiling-geek-hipster-beard-man-cool-avatar-geek-man-avatar-104871313.jpg" alt="profile photo">
            @endif
-           
+        
             <h3>{{Auth::user()->name}}</h3>
             <p>Designer</p>
         </div>
         <ul>
             <li>
-                <a href="/" class="ancre active">
+                <a href="/" class="active">
                     <span class="icon"><i class="fas fa-home"></i></span>
                     <span class="item">Home</span>
                 </a>
             </li>
             <li>
-                <a href="/admin.create_profile" class="ancre">
+                <a href="/admin.create_profile">
                     <span class="icon"><i class="fas fa-info"></i></span>
                     <span class="item">Profile</span>
                 </a>
             </li>
             <li>
-                <a href="/admin.create_award" class="ancre">
+                <a href="/admin.create_award">
                     <span class="icon"><i class="fas fa-award"></i></span>
                     <span class="item">Certification</span>
                 </a>
             </li>
             <li>
-                <a href="/admin.create_education" class="ancre">
+                <a href="/admin.create_education">
                     <span class="icon"><i class="fas fa-graduation-cap"></i></span>
                     <span class="item">education</span>
                 </a>
@@ -65,7 +65,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="ancre">
+                <a href="/admin.create_interest" class="ancre">
                     <span class="icon"><i class="fas fa-magic"></i></span>
                     <span class="item">interest</span>
                 </a>
@@ -77,7 +77,7 @@
                 </a>
             </li>
             <li>
-                <a href="#" class="ancre">
+                <a href="/logout" class="ancre">
                     <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
                     <span class="item">logout</span>
                 </a>

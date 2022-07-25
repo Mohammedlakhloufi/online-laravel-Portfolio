@@ -3,8 +3,10 @@
 use App\Http\Controllers\AwardController;
 use App\Http\Controllers\EducationController;
 use App\Http\Controllers\ExperienceController;
+use App\Http\Controllers\InterestController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShowController;
+use App\Models\Interest;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -54,6 +56,14 @@ Route::post('admin.store_award',[AwardController::class,'store_award']);
 Route::delete('admin.destroy_award/{id}',[AwardController::class,'destroy_award']);
 Route::get('admin.show_award/{id}',[AwardController::class,'show_award']);
 Route::put('admin.update_award/{id}',[AwardController::class,'update_award']);
+
+// Interest
+Route::get('admin.create_interest',[InterestController::class,'create_interest']);
+Route::post('admin.store_interest',[InterestController::class,'store_interest']);
+Route::delete('admin.destroy_interest/{id}',[InterestController::class,'destroy_interest']);
+Route::get('admin.show_interest/{id}',[InterestController::class,'show_interest']);
+Route::put('admin.update_interest/{id}',[InterestController::class,'update_interest']);
+
 });
 //Authentication
 Route::group(['prefix'=>'admin_ml_88'], function(){

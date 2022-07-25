@@ -37,7 +37,7 @@
 
             <div class="form-floating">
                 <textarea name="description" class="form-control mt-2 @error('description') is-invalid @enderror"
-                    placeholder="describe your post here" id="floatingTextarea2" style="height: 100px">value="{{$experience->description}}"</textarea>
+                    placeholder="describe your post here" id="floatingTextarea2" style="height: 100px">{{$experience->description}}</textarea>
                 <label for="floatingTextarea2">description</label>
                 @error('description')
                     <div class="alert alert-danger">{{ $message }}</div>
